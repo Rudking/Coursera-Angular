@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+<title>speechtotext</title>
+</head>
+<body>
+<div>
+<input type="text" placeholder="enter your name" id="texttospeech"/>
+</div>
+<div>
+<button onClick="Speak()">speak</button>
+
+
+<script>
+function Speak()
+{
+    let msg=document.getElementById("texttospeech").value;
+    let speech=new SpeechSynthesisUtterance();
+    speech.lang="en-US";
+    speech.text="hello"+msg;
+    speech.volume=1;
+    speech.rate=1;
+    speech.pitch=1;
+    window.speechSynthesis.speak(speech);
+
+}
+</script>
+
+
+
+</div>
+</body>
+</html>
